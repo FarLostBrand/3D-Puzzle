@@ -24,6 +24,12 @@ public class Enemy : MonoBehaviour
     private Vector3 startPos;
     //=====================================================
 
+    void OnDrawGizmosSelected(){
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawLine(transform.position, transform.position + moveOffset);
+        Gizmos.DrawWireCube(transform.position + moveOffset, transform.lossyScale);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
