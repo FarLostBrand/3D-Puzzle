@@ -23,6 +23,10 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     //==========================
 
+    // void Start(){
+    //     Time.timeScale = 1.25f;
+    // }
+
     // Update is called once per frame
     void Update()
     {
@@ -82,7 +86,7 @@ public class PlayerController : MonoBehaviour
         //isGrounded CHECK
 
         //.normal is the direction x thing is facing, so a floor would be facing up
-        if(collision.GetContact(0).normal == Vector3.up)
+        if(Vector3.Angle(collision.GetContact(0).normal, Vector3.up) < 60.0f)
         {
             isGrounded = true;
         }
