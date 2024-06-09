@@ -18,6 +18,7 @@ public class EndFlag : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            other.GetComponent<PlayerController>().SetInt(other.GetComponent<PlayerController>().scoreSaver, other.GetComponent<PlayerController>().score);
             if(lastLevel)
             {
                 SceneManager.LoadScene(0);

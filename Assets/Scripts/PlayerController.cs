@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using System;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class PlayerController : MonoBehaviour
 
     //for the score
     public int score;
+
+    public string scoreSaver = "Score";
     //==========================
 
     //==========================
@@ -23,9 +26,29 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     //==========================
 
-    // void Start(){
-    //     Time.timeScale = 1.25f;
-    // }
+    void Start()
+    {
+        if(SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Level1"))
+        {
+            score = GetInt(scoreSaver);
+            scoreText.text = "Score: " + score.ToString();
+        }
+        else
+        {
+            SetInt(scoreSaver, 0);
+            scoreText.text = "Score: " + score.ToString();
+        }
+    }
+
+    public void SetInt(string KeyName, int Value)
+    {
+        PlayerPrefs.SetInt(KeyName, Value);
+    }
+
+    public int GetInt(string KeyName)
+    {
+        return PlayerPrefs.GetInt(KeyName);
+    }
 
     // Update is called once per frame
     void Update()
