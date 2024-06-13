@@ -28,14 +28,14 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        if(SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Level1"))
+        if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Level1"))
         {
-            score = GetInt(scoreSaver);
+            SetInt(scoreSaver, 0);
             scoreText.text = "Score: " + score.ToString();
         }
         else
         {
-            SetInt(scoreSaver, 0);
+            score = GetInt(scoreSaver);
             scoreText.text = "Score: " + score.ToString();
         }
     }
