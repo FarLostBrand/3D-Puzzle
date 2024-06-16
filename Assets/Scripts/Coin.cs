@@ -5,6 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     public float _rotateSpeed = 180.0f;
+    [SerializeField] private AudioClip coinAudio;
 
     // Update is called once per frame
     void Update()
@@ -24,6 +25,7 @@ public class Coin : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             other.GetComponent<PlayerController>().AddScore(1); //increases the score by 1
+            AudioSource.PlayClipAtPoint(coinAudio, transform.position, 1f);
             Destroy(gameObject); //destroys the coin afterwards
         }
         //=================================================================================
