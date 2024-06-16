@@ -83,13 +83,16 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.F5))
         {
-            jumpForce += 15;
-            movementSpeed *= 2;
-        }
-
-        if(Input.GetKeyDown(KeyCode.F6))
-        {
-            movementSpeed *= 10;
+            if(jumpForce >= 15)
+            {
+                jumpForce -= 15;
+                movementSpeed /= 2;
+            }
+            else
+            {
+                jumpForce += 15;
+                movementSpeed *= 2;
+            }
         }
 
         //============================
