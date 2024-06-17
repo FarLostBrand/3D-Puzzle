@@ -814,7 +814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8658653735859488285, guid: 2fb3aac8de4f5f1d6a340ac55a434013, type: 3}
       propertyPath: speed
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8658653735859488285, guid: 2fb3aac8de4f5f1d6a340ac55a434013, type: 3}
       propertyPath: moveOffset.x
@@ -2293,7 +2293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8658653735859488285, guid: 2fb3aac8de4f5f1d6a340ac55a434013, type: 3}
       propertyPath: speed
-      value: 7.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8658653735859488285, guid: 2fb3aac8de4f5f1d6a340ac55a434013, type: 3}
       propertyPath: moveOffset.x
