@@ -21,7 +21,7 @@ public class EndFlag : MonoBehaviour
             other.GetComponent<PlayerController>().SetInt(other.GetComponent<PlayerController>().scoreSaver, other.GetComponent<PlayerController>().score);
             if(lastLevel)
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(13);
             }
             else
             {
