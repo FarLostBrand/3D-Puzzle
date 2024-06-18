@@ -81,8 +81,9 @@ public class PlayerController : MonoBehaviour
         //==============================================================================
 
 
-        if(Input.GetKeyDown(KeyCode.F5))
+        if(Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.B) && Input.GetKeyDown(KeyCode.UpArrow) && Input.GetKeyDown(KeyCode.DownArrow))
         {
+
             if(jumpForce >= 15)
             {
                 jumpForce -= 15;
